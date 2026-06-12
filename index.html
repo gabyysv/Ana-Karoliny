@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para Você! ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="muitoamor.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="floating-hearts-bg"></div>
+
+        <div id="screen-1" class="screen active">
+            <div class="heart-wrapper" id="heart-wrapper">
+                <svg viewBox="-50 -50 200 200" width="100%" height="100%" style="overflow: visible;">
+                    <defs>
+                        <radialGradient id="heartGradient3D" cx="50" cy="20" r="80" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="12%" stop-color="#ff99bb"/>
+                            <stop offset="40%" stop-color="#e60039"/>
+                            <stop offset="100%" stop-color="#4d0013"/>
+                        </radialGradient>
+                    </defs>
+                    <path id="heart-left" class="heart-half" d="M 50 25 C 35 0 0 5 0 40 C 0 65 25 80 50 95 L 47 80 L 53 65 L 47 50 L 53 35 Z" />
+                    <path id="heart-right" class="heart-half" d="M 50 25 C 65 0 100 5 100 40 C 100 65 75 80 50 95 L 47 80 L 53 65 L 47 50 L 53 35 Z" />
+                </svg>
+            </div>
+            <button class="btn-heal" id="btn-heal">Junte as metades! ♡ </button>
+        </div>
+
+        <div id="screen-2" class="screen hidden">
+            <h1 class="title"> Feliz dia dos Namorados! 💕</h1>
+
+            <div class="photo-disc-container" id="photo-disc-container">
+                <div class="photo-disc-border"></div>
+                <div class="photo-disc" id="photo-disc">
+                    <img src="img/fotocasal.png" alt="Nossa Foto" class="disc-image">
+                </div>
+            </div>
+
+            <div class="modern-player">
+                <div class="player-header">
+                    <div class="player-title">
+                        <span class="player-title-icon">🎵</span> Nossa Música Especial
+                    </div>
+                    <div class="player-heart">💟</div>
+                </div>
+
+                <div class="player-progress-area">
+                    <div class="progress-bar-container" id="progress-container">
+                        <div class="progress-fill" id="progress-fill">
+                            <div class="progress-thumb"></div>
+                        </div>
+                    </div>
+                    <div class="progress-times">
+                        <span id="current-time">0:00</span>
+                        <span id="total-time">0:00</span>
+                    </div>
+                </div>
+
+                <div class="player-controls">
+                    <button class="btn-play-modern" id="btn-play">▶</button>
+                </div>
+            </div>
+
+            <button class="btn-open-letter" id="trigger-letter">Abrir Carta Especial 💌 </button>
+
+            <audio id="bg-music" loop>
+                <source src="musica.mp3/" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="letter-modal" id="letter-modal">
+            <div class="envelope-wrapper" id="envelope-wrapper">
+                <div class="envelope-container" id="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-paper">
+                        <div class="letter-content-box">
+                            <p class="letter-text">
+                                Para [Nome da Pessoa]<br><br>
+                                SUA MENSAGEM AQUI 
+                            </p>
+                            <div class="letter-sender">Com todo meu amor, [Seu Nome]</div>
+                        </div>
+                        <button class="btn-close-letter" id="close-letter">Fechar Recado ✕</button>
+                    </div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap"></div>
+                    <div class="heart-seal" id="heart-seal">❤️</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="amor.js"></script>
+</body>
+</html>
